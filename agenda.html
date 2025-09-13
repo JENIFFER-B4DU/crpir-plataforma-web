@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Fonte Open Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="agenda.css">
+
+  <!-- JS externo -->
+  <script src="agenda.js" defer></script>
+
+  <title>Agenda de Atividades</title>
+</head>
+<body class="light-mode">
+
+  <!-- Cabeçalho -->
+  <header>
+    <div id="header-left">
+      <button id="menu-toggle">☰</button>
+      <h1>CRPIR Cidade Tiradentes</h1>
+    </div>
+
+    <div id="accessibility-buttons">
+      <button id="dark-mode-toggle">Dark Mode</button>
+      <button id="info-button">Dúvidas</button>
+      <button id="text-size-button">A+</button>
+    </div>
+  </header>
+
+  <!-- Menu de navegação -->
+  <nav>
+    <ul id="menu" style="display: none;">
+      <li><a href="Início.HTML">Início</a></li>
+      <li><a href="sobre.html">Sobre o CRPIR</a></li>
+      <li><a href="agenda.html">Agenda</a></li>
+      <li><a href="denunciar.html">Como Denunciar</a></li>
+    </ul>
+  </nav>
+
+  <!-- Carrossel de eventos -->
+  <section>
+    <h2>Atividades Culturais e Educativas</h2>
+    <div class="carousel">
+      <div class="carousel__slide">
+        <img src="https://images.pexels.com/photos/28975498/pexels-photo-28975498.jpeg" alt="Curso de Capoeira">
+        <p>Curso de Capoeira – expressão corporal e resgate cultural. A partir de 10 anos.</p>
+      </div>
+      <div class="carousel__slide">
+        <img src="https://images.pexels.com/photos/6978758/pexels-photo-6978758.jpeg" alt="Oficina de Pintura">
+        <p>Oficina de Pintura – arte afro-brasileira com técnicas livres. Livre para todas as idades.</p>
+      </div>
+      <div class="carousel__slide">
+        <img src="https://images.pexels.com/photos/33539776/pexels-photo-33539776.jpeg" alt="Palestra Antirracista">
+        <p>Palestra sobre Letramento Antirracista – educação para a equidade. Recomendado a partir de 16 anos.</p>
+      </div>
+      <div class="carousel__slide">
+        <img src="https://images.pexels.com/photos/27987137/pexels-photo-27987137.jpeg" alt="Empoderamento Feminino">
+        <p>Palestra de Empoderamento Feminino – força, voz e identidade. Livre.</p>
+      </div>
+      <div class="carousel__slide">
+        <img src="https://images.pexels.com/photos/11392912/pexels-photo-11392912.jpeg" alt="Sarau Cultural">
+        <p>Sarau de Ancestralidade – poesia, música e memória negra. Livre.</p>
+      </div>
+      <div class="carousel__slide">
+        <img src="https://images.pexels.com/photos/27987128/pexels-photo-27987128.jpeg" alt="Curso de Tranças Afro">
+        <p>Curso de Tranças Afro – técnicas e valorização estética. Recomendado a partir de 16 anos.</p>
+      </div>
+      <div class="carousel__slide">
+        <img src="https://images.pexels.com/photos/7025511/pexels-photo-7025511.jpeg" alt="Curso Infantil">
+        <p>Curso Infantil – aprendendo sobre racismo, microagressões e como se proteger. Para crianças de 6 a 10 anos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Layout com calendário e cursos -->
+  <main class="agenda-layout">
+    <div class="calendar">
+      <h3>Calendário de Eventos</h3>
+      <div class="calendar-grid">
+        <div class="day marked">05/09 – Oficina de Pintura</div>
+        <div class="day marked">10/09 – Palestra de Empoderamento</div>
+        <div class="day marked">15/09 – Curso de Capoeira</div>
+        <div class="day marked">20/09 – Sarau Cultural</div>
+        <div class="day marked">25/09 – Palestra Antirracista</div>
+        <div class="day marked">01/10 – Curso de Tranças Afro</div>
+        <div class="day marked">10/10 – Curso Infantil</div>
+      </div>
+    </div>
+
+    <div class="courses">
+      <h3>Inscreva-se nos Cursos</h3>
+      <div class="course-box">
+        <h4>Curso de Capoeira</h4>
+        <p>Gratuito | 15 a 30 de setembro<br>A partir de 10 anos</p>
+        <button class="inscricao-button">Inscrever-se</button>
+      </div>
+      <div class="course-box">
+        <h4>Curso de Tranças Afro</h4>
+        <p>Gratuito | 01 a 15 de outubro<br>A partir de 16 anos</p>
+        <button class="inscricao-button">Inscrever-se</button>
+      </div>
+      <div class="course-box">
+        <h4>Curso Infantil – Consciência Racial</h4>
+        <p>Gratuito | 10 a 25 de outubro<br>Para crianças de 6 a 10 anos</p>
+        <button class="inscricao-button">Inscrever-se</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>Projeto acadêmico – Curso de Desenvolvimento Web</p>
+  </footer>
+
+</body>
+</html>

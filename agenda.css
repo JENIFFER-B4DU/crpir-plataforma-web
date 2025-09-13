@@ -1,0 +1,288 @@
+/* ---------------- RESET ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------- FONTE GLOBAL ---------------- */
+body {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+body.light-mode {
+  background: #f9f9f9;
+  color: #222;
+}
+
+body.dark-mode {
+  background: linear-gradient(135deg, #222, #444);
+  color: #f0f0f0;
+}
+
+body.large-text {
+  font-size: 1.2rem;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #1a1a1a;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+#header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  white-space: nowrap;
+}
+
+#menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ---------------- MENU ---------------- */
+nav ul {
+  list-style: none;
+  background: #222;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 200px;
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 1000;
+}
+
+nav ul li {
+  margin: 10px 0;
+}
+
+nav ul a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul a:hover {
+  color: #ffcc00;
+}
+
+/* ---------------- BOTÕES DE ACESSIBILIDADE ---------------- */
+#accessibility-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+#accessibility-buttons button {
+  background: #ffcc00;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#accessibility-buttons button:hover {
+  background: #ffaa00;
+}
+
+/* ---------------- SEÇÃO DO CARROSSEL ---------------- */
+section {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 10px;
+}
+
+.carousel__slide {
+  flex: 0 0 600px;
+  scroll-snap-align: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.4);
+  padding: 20px;
+  text-align: center;
+}
+
+.carousel__slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.carousel__slide p {
+  font-size: 1rem;
+}
+
+/* ---------------- LAYOUT PRINCIPAL ---------------- */
+.agenda-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px 20px;
+  gap: 20px;
+}
+
+/* ---------------- CALENDÁRIO ---------------- */
+.calendar {
+  flex: 1;
+  min-width: 250px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.4);
+}
+
+.calendar h3 {
+  margin-bottom: 15px;
+  color: #ffcc00;
+}
+
+.calendar-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.day.marked {
+  background: #ffcc00;
+  color: #222;
+  padding: 8px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* ---------------- CURSOS ---------------- */
+.courses {
+  flex: 2;
+  min-width: 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.4);
+}
+
+.courses h3 {
+  margin-bottom: 15px;
+  color: #ffcc00;
+}
+
+.course-box {
+  background: #f1f1f1;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.course-box h4 {
+  margin-bottom: 5px;
+}
+
+.course-box p {
+  margin-bottom: 10px;
+}
+
+.inscricao-button {
+  background: #ffcc00;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.inscricao-button:hover {
+  background: #ffaa00;
+}
+
+/* ---------------- DARK MODE ---------------- */
+body.dark-mode section,
+body.dark-mode .carousel__slide,
+body.dark-mode .calendar,
+body.dark-mode .courses,
+body.dark-mode .course-box {
+  background: #333;
+  color: #f0f0f0;
+  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.6);
+}
+
+body.dark-mode a {
+  color: #ffcc00;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #1a1a1a;
+  color: #ccc;
+  margin-top: 20px;
+}
+
+/* ---------------- RESPONSIVIDADE ---------------- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #header-left {
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    top: 55px;
+    right: 10px;
+    width: 150px;
+  }
+
+  #accessibility-buttons {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .agenda-layout {
+    flex-direction: column;
+  }
+
+  .carousel__slide {
+    flex: 0 0 100%;
+    height: auto;
+  }
+
+  .carousel__slide img {
+    height: auto;
+    max-height: 250px;
+  }
+}

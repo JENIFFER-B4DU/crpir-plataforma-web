@@ -1,0 +1,266 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte global */
+body {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+body.light-mode {
+  background: #f9f9f9;
+  color: #222;
+}
+
+body.dark-mode {
+  background: linear-gradient(135deg, #222, #444);
+  color: #f0f0f0;
+}
+
+body.large-text {
+  font-size: 1.2rem; /* aumenta globalmente */
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #1a1a1a;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+#header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  white-space: nowrap;
+}
+
+#menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ---------------- MENU ---------------- */
+nav ul {
+  list-style: none;
+  background: #222;
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  right: auto;
+  width: 200px;
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 1000;
+}
+
+nav ul li {
+  margin: 10px 0;
+}
+
+nav ul a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul a:hover {
+  color: #ffcc00;
+}
+
+/* ---------------- BOTÕES DE ACESSIBILIDADE ---------------- */
+#accessibility-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+#accessibility-buttons button {
+  background: #ffcc00;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#accessibility-buttons button:hover {
+  background: #ffaa00;
+}
+
+/* ---------------- SEÇÕES ---------------- */
+section {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+section h2, section h3 {
+  margin-bottom: 15px;
+  color: #ffcc00;
+}
+
+/* ---------------- CARROSSEL ---------------- */
+.carousel {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Esconde os radio buttons */
+.carousel input {
+  display: none;
+}
+
+.carousel__track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel__slide {
+  min-width: 100%;
+  background: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  border-radius: 10px 10px 10px 10px; /* bordas arredondadas completas */
+  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.4); /* sombra amarela */
+}
+
+.carousel__slide h4 {
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+/* Regras para mover o track conforme o radio selecionado */
+#slide1:checked ~ .carousel__track {
+  transform: translateX(0%);
+}
+
+#slide2:checked ~ .carousel__track {
+  transform: translateX(-100%);
+}
+
+#slide3:checked ~ .carousel__track {
+  transform: translateX(-200%);
+}
+
+#slide4:checked ~ .carousel__track {
+  transform: translateX(-300%);
+}
+
+#slide5:checked ~ .carousel__track {
+  transform: translateX(-400%);
+}
+
+/* Indicadores */
+.carousel__indicators {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 2;
+}
+
+.carousel__indicator {
+  width: 12px;
+  height: 12px;
+  background: #aaa;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Destaque para o indicador ativo */
+#slide1:checked ~ .carousel__indicators label[for="slide1"],
+#slide2:checked ~ .carousel__indicators label[for="slide2"],
+#slide3:checked ~ .carousel__indicators label[for="slide3"],
+#slide4:checked ~ .carousel__indicators label[for="slide4"],
+#slide5:checked ~ .carousel__indicators label[for="slide5"] {
+  background: #ffcc00;
+}
+
+/* ---------------- ASIDE ---------------- */
+aside {
+  background: #ffffff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.4); /* sombra amarela */
+}
+
+aside h4 {
+  margin-bottom: 10px;
+  color: #ffcc00;
+}
+
+/* ---------------- DARK MODE ---------------- */
+body.dark-mode .carousel__slide,
+body.dark-mode aside {
+  background: #333;
+  color: #f0f0f0;
+  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.6); /* sombra amarela mais visível no escuro */
+}
+
+body.dark-mode a {
+  color: #ffcc00;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #1a1a1a;
+  color: #ccc;
+  margin-top: 20px;
+}
+
+aside p {
+  word-break: break-word;
+}
+
+/* ---------------- RESPONSIVIDADE ---------------- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #header-left {
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    top: 55px;
+    right: 10px;
+    width: 150px;
+  }
+
+  .carousel__slide {
+    padding: 20px 10px;
+  }
+
+  #accessibility-buttons {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}

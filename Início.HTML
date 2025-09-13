@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Fonte Open Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="Início.CSS">
+
+  <!-- JS externo -->
+  <script src="Início.JS" defer></script>
+
+  <title>CRPIR Cidade Tiradentes</title>
+</head>
+<body class="light-mode">
+
+  <!-- Cabeçalho com botão hamburguer, título e botões de acessibilidade -->
+  <header>
+    <div id="header-left">
+      <button id="menu-toggle">☰</button>
+      <h1>CRPIR Cidade Tiradentes</h1>
+    </div>
+
+    <div id="accessibility-buttons">
+      <button id="dark-mode-toggle">Dark Mode</button>
+      <button id="info-button">Dúvidas</button>
+      <button id="text-size-button">A+</button>
+    </div>
+  </header>
+
+  <!-- Menu de navegação oculto -->
+  <nav>
+    <ul id="menu" style="display: none;">
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Sobre o CRPIR</a></li>
+      <li><a href="#">Agenda</a></li>
+      <li><a href="#">Como Denunciar</a></li>
+    </ul>
+  </nav>
+
+  <!-- Subtítulo informativo -->
+  <section>
+    <h2>Promoção da Igualdade Racial e Acesso à Cidadania</h2>
+    <p>O Centros de Referência de Promoção da Igualdade Racial (CRPIR) oferece acolhimento, orientação e ações educativas voltadas ao combate ao racismo e à promoção da cidadania.</p>
+  </section>
+
+  <!-- Carrossel de conteúdos educativos -->
+  <section>
+    <h3>Educação Antirracista</h3>
+
+    <div class="carousel">
+      <!-- Radio buttons (controlam os slides) -->
+      <input type="radio" name="carousel" id="slide1" checked>
+      <input type="radio" name="carousel" id="slide2">
+      <input type="radio" name="carousel" id="slide3">
+      <input type="radio" name="carousel" id="slide4">
+      <input type="radio" name="carousel" id="slide5">
+
+      <!-- Container dos slides -->
+      <div class="carousel__track">
+        <div class="carousel__slide">
+          <h4>O que é Educação Antirracista?</h4>
+          <p>Educação Antirracista é o compromisso de reconhecer, combater e prevenir o racismo em todas as suas formas. No CRPIR, isso acontece por meio de ações educativas, culturais e sociais que valorizam a diversidade, promovem a equidade e fortalecem a cidadania.</p>
+        </div>
+
+        <div class="carousel__slide">
+          <h4>Racismo Estrutural</h4>
+          <p>Está presente nas leis, instituições e práticas que perpetuam desigualdades raciais. Não é sobre atitudes individuais, mas sobre sistemas que excluem.</p>
+        </div>
+
+        <div class="carousel__slide">
+          <h4>Letramento Antirracista</h4>
+          <p>É aprender a identificar o racismo, entender seus impactos e agir contra ele. Envolve escuta, estudo e mudança de postura no dia a dia.</p>
+        </div>
+
+        <div class="carousel__slide">
+          <h4>Microagressões</h4>
+          <p>São comentários ou atitudes sutis que reforçam estereótipos racistas. Mesmo sem intenção, causam dor e reforçam exclusão.</p>
+        </div>
+
+        <div class="carousel__slide">
+          <h4>Racismo no Ambiente de Trabalho</h4>
+          <p>Ocorre quando pessoas negras são ignoradas, subestimadas ou excluídas em espaços profissionais. Combater isso é promover equidade e respeito.</p>
+        </div>
+      </div>
+
+      <!-- Botões indicadores -->
+      <div class="carousel__indicators">
+        <label for="slide1" class="carousel__indicator"></label>
+        <label for="slide2" class="carousel__indicator"></label>
+        <label for="slide3" class="carousel__indicator"></label>
+        <label for="slide4" class="carousel__indicator"></label>
+        <label for="slide5" class="carousel__indicator"></label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Informações institucionais -->
+  <aside>
+    <h4>Informações de Contato</h4>
+    <p>📍 Av. dos Metalúrgicos, 155 – Cidade Tiradentes</p>
+    <p>🕒 Segunda a sexta, das 9h às 18h</p>
+    <p>📞 (11) 2558-8896 | Racismo é crime, disque 156</p> 
+    <p>📱 WhatsApp: (11) 97624-8258</p>
+    <p>✉️ smdhccrpirleste1@prefeitura.sp.gov.br</p>
+  </aside>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>Projeto acadêmico – Curso de Desenvolvimento Web</p>
+  </footer>
+
+</body>
+</html>
